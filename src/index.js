@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import 'babel-polyfill';
-import App from './App'
+import App from './App';
 
-const renderDom = Component => {
+const renderDom = (Component) => {
   render(
     <Component />,
-    document.getElementById('app')
-);
-}
+    document.getElementById('app'),
+  );
+};
 renderDom(App);

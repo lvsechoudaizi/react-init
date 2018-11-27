@@ -159,3 +159,29 @@ npm install webpack-dev-server --save-dev　　
 18.创建.eslintignore/.gitignore忽视文件配置
 
 19.目前为止，项目环境已经全部搭建成功
+
+******************************************
+    开发过程中遇到的问题
+******************************************
+1.使用箭头函数报错：
+  缺少编译jsx中es6语法的版块
+  
+  ES7不同阶段语法提案的转码规则（共有4个阶段），选装一个
+  npm install babel-preset-stage-1 --save　
+  
+  配置：.babelrc文件
+  
+*****************************************
+      开发过程中的插件
+****************************************
+1.classnames库
+安装：
+npm install classnames --save
+
+2.安装加载器
+  加载解析CSS预处理语言：
+    安装：
+    css-loader: 解析css代码
+    style-laoder: 将编译后css样式导入到html中
+    less-loader: 加载和转移less文件
+  (用的Less语法，需要安装less)
