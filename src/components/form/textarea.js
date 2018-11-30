@@ -1,7 +1,7 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import './index.less';
+import styles from './index.less';
 
 
 export default class Textarea extends Component {
@@ -40,7 +40,7 @@ export default class Textarea extends Component {
     });
     return (
       <div>
-        <p className={btnClass}>
+        <p className={styles[btnClass]}>
           单行文本框：
           <input type="text" value={this.state.inputValue} onChange={this.handleInputChange} />
         </p>

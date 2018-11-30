@@ -1,0 +1,28 @@
+/* components/button.css */
+.normal {
+  /* all styles for Normal */
+  width: 120px;
+  padding: 10px;
+}
+.disabled {
+  composes: normal;
+  /* all styles for Disabled */
+  background-color: #eeeeee;
+  border: 1px solid #ddd;
+  color: black;
+}
+.error {
+  composes: normal;
+  /* all styles for Error */
+  background-color: orangered;
+  border: 1px solid orange;
+  color: #ffffff;
+}
+.inProgress {
+  composes: normal;
+  composes: btn from '../form/index.less';
+  /* all styles for In Progress */
+  background-color: aquamarine;
+  border: 1px solid aqua;
+  color: #ffffff;
+}

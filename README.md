@@ -185,3 +185,10 @@ npm install classnames --save
     style-laoder: 将编译后css样式导入到html中
     less-loader: 加载和转移less文件
   (用的Less语法，需要安装less)
+
+3.启用CSS Modules
+(https://glenmaddern.com/articles/css-modules)
+  配置webpack：loader: 'css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]',
+  
+4.安装装饰器插件
+npm install --save-dev babel/plugin-proposal-decorators

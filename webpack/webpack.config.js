@@ -27,7 +27,7 @@ module.exports = {
             loader: 'style-loader',
           },
           {
-            loader: 'css-loader',
+            loader: 'css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]',
           },
           {
             loader: 'less-loader',
