@@ -1,11 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import 'babel-polyfill';
+import { BrowserRouter as Router } from 'react-router-dom'
+import '@babel/polyfill';
 import App from './App';
 
 const renderDom = (Component) => {
   render(
-    <Component />,
+    <Router>
+      <Component />
+    </Router>,
     document.getElementById('app'),
   );
 };

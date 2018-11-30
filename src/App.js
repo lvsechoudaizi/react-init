@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import Textarea from './components/form/textarea';
 import CSSModules from './components/cssModules';
@@ -11,13 +12,11 @@ class App extends Component {
   }
 
   render() {
-    const foo = 'bar';
-    const bar = { foo };
-    console.log('bar', bar);
     return (
-      <div>
-        <CSSModules />
-      </div>
+      <Switch>
+        <Route path="/" component={Textarea} />
+        <Route path="/system" component={CSSModules} />
+      </Switch>
     );
   }
 }

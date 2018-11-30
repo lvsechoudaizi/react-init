@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { withRouter } from 'react-router-dom';
 
 const pathHoc = (WrappedComponent) => {
+  @withRouter
   class HOC extends PureComponent {
     componentDidMount() {
       // 先初始化一次
@@ -24,6 +25,7 @@ const pathHoc = (WrappedComponent) => {
     }
 
     render() {
+      // 属性代理WrappedComponent
       return <WrappedComponent {...this.props} />;
     }
   }

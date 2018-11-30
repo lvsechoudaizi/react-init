@@ -1,14 +1,16 @@
 {
   "presets": [
-    [
-      "es2015",
-      {
-        "module": false
+    ["@babel/preset-env", {
+      "modules": false,
+      "targets": {
+        "ie": "11"
       }
-    ],
-    "react",
-    "stage-1"
+    }],
+    "@babel/preset-react"
   ],
   "plugins": [
-    "react-hot-loader/babel"]
+    "react-hot-loader/babel",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]
+  ]
 }

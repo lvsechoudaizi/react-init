@@ -171,6 +171,9 @@ npm install webpack-dev-server --save-dev　　
   
   配置：.babelrc文件
   
+2.安装babel过程中出现错误，如果在你的 package.json 依赖包中既有 babel 7.0 版本，又有 babel 6.0 版本，两个版本是不兼容的,会报错
+
+  
 *****************************************
       开发过程中的插件
 ****************************************
@@ -191,4 +194,28 @@ npm install classnames --save
   配置webpack：loader: 'css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]',
   
 4.安装装饰器插件
-npm install --save-dev babel/plugin-proposal-decorators
+npm install --save-dev @babel/plugin-proposal-decorators
+npm install --save-dev @babel/plugin-proposal-class-properties
+
+安装过程中 版本问题报错升级babel/core（心塞）
+npm install --save @babel/core@^7.0.0
+
+----安装后出现了两个babel/core,删除低版本的
+npm uninstall --save babel-core@6.26.3
+
+5.安装react-router包
+npm install --save react-router-dom
+//使用
+<Switch>
+  <Route path="/" component={Textarea} />
+  <Route path="/system" component={CSSModules} />
+</Switch>
+//上一层组件必须被<BrowserRouter>包裹
+
+6.引入ant design
+npm install antd --save
+
+7.使用 PropTypes 进行类型检查
+npm install prop-types --save
+
+
